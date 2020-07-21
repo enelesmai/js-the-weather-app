@@ -1,0 +1,4 @@
+.weatherInfo {
+    display: flex;
+    flex-direction: column;
+}
