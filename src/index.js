@@ -1,6 +1,9 @@
 import _ from 'lodash';
 import { ApiController } from './api_controller';
 import DisplayController from './display_controller';
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './style.css';
 
 const img = document.querySelector('img');
 
