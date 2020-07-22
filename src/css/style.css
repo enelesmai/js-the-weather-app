@@ -31,12 +31,18 @@ body {
     margin-right: 20px;
     box-sizing: border-box;
     height: 100%;
+    background-image: url('../img/rain.png');
+    background-position: center;
+    background-size: cover;
 }
 
 .main-info {
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin: auto 25px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
 }
 
 .temp {
@@ -44,6 +50,12 @@ body {
     flex-direction: row;
     font-size: 6em;
     font-weight: bold;
+}
+
+.box-detail {
+    display: flex;
+    flex-direction: row;
+    font-size: 2em;
 }
 
 .secondary {
@@ -70,6 +82,30 @@ body {
 }
 
 .more-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     border-radius: 12px;
     border: 2px solid #fff;
+    padding-top: 20px;
+}
+
+.icon-w {
+    font-size: 10em;
+    padding: 20px auto;
+}
+
+.more-info-text {
+    font-size: 2em;
+    padding: 10px auto;
+}
+
+.icon-status {
+    border-radius: 50%;
+    background-color: #1fc8db;
+}
+
+label {
+    margin-bottom: 0 !important;
 }

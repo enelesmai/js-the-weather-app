@@ -2,6 +2,7 @@ import { Weather } from './weather';
 
 export const ApiController = (() => {
     const api_weather_app = 'http://api.openweathermap.org/data/2.5/weather?q=#location&appid=f3829e82bc93f1c9d497b6b667b49b50';
+    const icon_server = 'http://openweathermap.org/img/wn/';
     const getWeatherAsync = (location) =>
         (async() => {
             let api_call = api_weather_app.replace(/#location/, location);
@@ -22,7 +23,8 @@ export const ApiController = (() => {
             t.main.temp_min,
             t.name,
             t.sys.country,
-            t.timezone
+            t.timezone,
+            icon_server + t.weather[0].icon + '@2x.png'
         );
         return obj;
     };

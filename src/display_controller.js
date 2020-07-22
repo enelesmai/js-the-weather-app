@@ -9,6 +9,8 @@ export const DisplayController = (() => {
         document.getElementById('pressure').innerHTML = w.getDetails().pressure;
         document.getElementById('humidity').innerHTML = w.getDetails().humidity;
         document.getElementById('location-full-name').innerHTML = w.getFullCityName();
+        const img = document.getElementById('icon-weather');
+        img.src = w.getDetails().url_icon;
     };
     return {
         displayWeather,

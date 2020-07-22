@@ -1,4 +1,4 @@
-export const WeatherDetails = (feels_like, humidity, pressure, temp, temp_max, temp_min, city, country, timezone) => {
+export const WeatherDetails = (feels_like, humidity, pressure, temp, temp_max, temp_min, city, country, timezone, url_icon) => {
     return {
         feels_like,
         humidity,
@@ -8,7 +8,8 @@ export const WeatherDetails = (feels_like, humidity, pressure, temp, temp_max, t
         temp_min,
         city,
         country,
-        timezone
+        timezone,
+        url_icon
     };
 };
 export default WeatherDetails;

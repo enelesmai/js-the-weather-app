@@ -1,6 +1,6 @@
 import { WeatherDetails } from './weather_details';
-export const Weather = (general_desc, feels_like, humidity, pressure, temp, temp_max, temp_min, city, country, timezone) => {
-    const details = WeatherDetails(feels_like, humidity, pressure, temp, temp_max, temp_min, city, country, timezone);
+export const Weather = (general_desc, feels_like, humidity, pressure, temp, temp_max, temp_min, city, country, timezone, url_icon) => {
+    const details = WeatherDetails(feels_like, humidity, pressure, temp, temp_max, temp_min, city, country, timezone, url_icon);
     const getGeneralDescripcion = () => general_desc;
     const getDetails = () => details;
     const getFullCityName = () => details.city + ", " + details.country;
