@@ -10,7 +10,8 @@ export const ApiController = (() => {
             return translateResponseToObject(data);
         })();
     const translateResponseToObject = (t) => {
-        console.log(t.main.feels_like);
+        console.log("response");
+        console.log(t);
         let obj = Weather(
             t.weather[0].description,
             t.main.feels_like,
@@ -18,9 +19,11 @@ export const ApiController = (() => {
             t.main.pressure,
             t.main.temp,
             t.main.temp_max,
-            t.main.temp_min
+            t.main.temp_min,
+            t.name,
+            t.sys.country,
+            t.timezone
         );
-        console.log(obj);
         return obj;
     };
     return {

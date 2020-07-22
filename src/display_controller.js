@@ -1,8 +1,6 @@
 import { Weather } from './weather';
 export const DisplayController = (() => {
     const displayWeather = (w) => {
-        console.log('display');
-        console.log(w);
         document.getElementById('general').innerHTML = w.getGeneralDescripcion();
         document.getElementById('temp').innerHTML = w.getDetails().temp;
         document.getElementById('temp_max').innerHTML = w.getDetails().temp_max;
@@ -10,6 +8,7 @@ export const DisplayController = (() => {
         document.getElementById('feels_like').innerHTML = w.getDetails().feels_like;
         document.getElementById('pressure').innerHTML = w.getDetails().pressure;
         document.getElementById('humidity').innerHTML = w.getDetails().humidity;
+        document.getElementById('location-full-name').innerHTML = w.getFullCityName();
     };
     return {
         displayWeather,
