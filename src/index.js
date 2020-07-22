@@ -20,4 +20,5 @@ fetch('https://api.giphy.com/v1/gifs/translate?api_key=79ob7uEjk3i88OjPm9WFb4aBz
 //     ApiController.getWeather('London'));
 
 console.log('test');
-console.log(ApiController.getWeather('London'));
+ApiController.getWeatherAsync('London')
+    .then(data => DisplayController.displayWeather(data));
