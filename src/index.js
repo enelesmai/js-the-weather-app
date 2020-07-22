@@ -1,24 +1,31 @@
 import _ from 'lodash';
 import { ApiController } from './api_controller';
 import DisplayController from './display_controller';
+import "@fortawesome/fontawesome-free/js/all.js";
+import "@fortawesome/fontawesome-free/css/all.css";
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './style.css';
+import './css/style.css';
+import './css/searchbox.css';
 
-const img = document.querySelector('img');
+function getInfo(search) {
+    ApiController.getWeatherAsync(search)
+        .then(data => DisplayController.displayWeather(data));
+}
 
-fetch('https://api.giphy.com/v1/gifs/translate?api_key=79ob7uEjk3i88OjPm9WFb4aBzpsFUqhY&s=cats', { mode: 'cors' })
-    .then(function(response) {
-        return response.json();
-    })
-    .then(function(response) {
-        img.src = response.data.images.original.url;
+document.addEventListener('DOMContentLoaded', () => {
+    let search_input = document.getElementById('search_input');
+    let search_icon = document.getElementById('search_icon');
+
+    //addevent onclick or enter
+    search_icon.addEventListener('click', () => {
+        getInfo(search_input.value);
     });
 
+    search_input.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            getInfo(search_input.value);
+        }
+    });
 
-// DisplayController.displayWeather(
-//     ApiController.getWeather('London'));
-
-console.log('test');
-ApiController.getWeatherAsync('London')
-    .then(data => DisplayController.displayWeather(data));
+});

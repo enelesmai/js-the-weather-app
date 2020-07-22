@@ -1,5 +1,4 @@
 import { Weather } from './weather';
-import { DisplayController } from './display_controller';
 
 export const ApiController = (() => {
     const api_weather_app = 'http://api.openweathermap.org/data/2.5/weather?q=#location&appid=f3829e82bc93f1c9d497b6b667b49b50';

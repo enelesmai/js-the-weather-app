@@ -8,6 +8,8 @@ export const DisplayController = (() => {
         document.getElementById('temp_max').innerHTML = w.getDetails().temp_max;
         document.getElementById('temp_min').innerHTML = w.getDetails().temp_min;
         document.getElementById('feels_like').innerHTML = w.getDetails().feels_like;
+        document.getElementById('pressure').innerHTML = w.getDetails().pressure;
+        document.getElementById('humidity').innerHTML = w.getDetails().humidity;
     };
     return {
         displayWeather,
