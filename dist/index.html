@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Getting Started</title>
+</head>
+
+<body>
+    <section class="search">
+        <div class="container h-100">
+            <div class="d-flex flex-row justify-content-center align-items-center h-100">
+                <div class="searchbar">
+                    &nbsp;&nbsp;<span class="fa fa-map-marker text-white"></span>
+                    <label class="text-white font-weight-bold">&nbsp;&nbsp;&nbsp;Location</label>
+                    <input id="search_input" class="search_input text-center" type="text" name="" placeholder="Enter a location...">
+                    <a href="#" id="search_icon" class="search_icon"><i class="fas fa-search"></i></a>
+                </div>
+                <div class="custom-control custom-switch ml-5">
+                    <input type="checkbox" class="custom-control-input" id="chkCelsius">
+                    <label class="custom-control-label" for="chkCelsius">show in Celsius°</label>
+                </div>
+            </div>
+        </div>
+    </section>
+    <main class="weatherInfo hide">
+        <div class="current">
+            <div class="card-current" id="card-current">
+                <div class="main-info">
+                    <div class="icon-status">
+                        <img id="icon-weather" />
+                    </div>
+                    <label id="general"></label>
+                    <label id="location-full-name"></label>
+                    <div class="temp">
+                        <label id="temp"></label>°<label class="mode">F</label>
+                    </div>
+                </div>
+                <div class="secondary">
+                    <span class="font-weight-bold">Feels Like: </span><label id="feels_like"></label>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label id="time-hour-date"></label>
+                </div>
+            </div>
+        </div>
+        <div class="more">
+            <div class="more-box">
+                <i class="fas fa-temperature-low icon-w"></i>
+                <div class="box-detail">
+                    <label id="temp_min" class="more-info-text"></label> °
+                    <label class="mode">F</label>
+                </div>
+                <label class="more-info-text">min temp</label>
+            </div>
+            <div class="more-box">
+                <i class="fas fa-temperature-high icon-w"></i>
+                <div class="box-detail">
+                    <label id="temp_max" class="more-info-text"></label> °
+                    <label class="mode">F</label>
+                </div>
+                <label class="more-info-text">max temp</label>
+            </div>
+            <div class="more-box">
+                <i class="fas fa-compress-arrows-alt icon-w"></i>
+                <div class="box-detail">
+                    <label id="pressure" class="more-info-text"></label>mb
+                </div>
+                <label class="more-info-text">pressure</label>
+            </div>
+            <div class="more-box">
+                <i class="fas fa-tint icon-w"></i>
+                <div class="box-detail">
+                    <label id="humidity" class="more-info-text"></label>%
+                </div>
+                <label class="more-info-text">humidity</label>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <a href="https://es.vecteezy.com/vectores-gratis/ilustraci%C3%B3n">Ilustración Vectores por Vecteezy</a>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>
