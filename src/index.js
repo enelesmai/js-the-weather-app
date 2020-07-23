@@ -29,4 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    chkCelsius.addEventListener('change', function() {
+        getInfo(search_input.value, chkCelsius.checked ? "C" : "F");
+    });
+
 });
