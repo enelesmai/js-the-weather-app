@@ -11,6 +11,10 @@ export const DisplayController = (() => {
         document.getElementById('location-full-name').innerHTML = w.getFullCityName();
         const img = document.getElementById('icon-weather');
         img.src = w.getDetails().url_icon;
+        const main = document.querySelector('main');
+        main.classList.remove("hide");
+        main.classList.remove("show-main");
+        main.classList.add("show-main");
     };
     return {
         displayWeather,
