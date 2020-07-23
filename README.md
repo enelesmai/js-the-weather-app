@@ -14,7 +14,7 @@ js-the-weather-app is a simple javascript application that consults the Open Wea
 
 ## Live Demo
 
-[Live Demo Link](https://raw.githack.com/enelesmai/js-the-weather-app/feature-app/dist/index.html)
+[Live Demo Link](http://raw.githack.com/enelesmai/js-the-weather-app/feature-app/dist/index.html)
 
 
 ## Getting Started
