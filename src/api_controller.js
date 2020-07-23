@@ -24,7 +24,8 @@ export const ApiController = (() => {
             t.name,
             t.sys.country,
             t.timezone,
-            icon_server + t.weather[0].icon + '@2x.png'
+            icon_server + t.weather[0].icon + '@2x.png',
+            t.weather[0].main,
         );
         return obj;
     };

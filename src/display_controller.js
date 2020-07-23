@@ -1,5 +1,22 @@
 import { Weather } from './weather';
 export const DisplayController = (() => {
+    const displayBackgroudnWeather = (weather) => {
+        console.log(weather);
+        const img = document.getElementById('card-current');
+        const scenes = ["thunderstorm", "drizzle", "rain", "snow", "clear", "clouds"];
+        let found = false;
+        scenes.forEach(element => {
+            console.log(element);
+            if (weather.toLowerCase().includes(element)) {
+                img.style.backgroundImage = "url('/src/img/" + element + ".jpg')";
+                found = true;
+            }
+        });
+        if (!found) {
+            img.style.backgroundImage = "url('/src/img/athmosphere.jpg')";
+        }
+        console.log(found);
+    };
     const displayWeather = (w) => {
         document.getElementById('general').innerHTML = w.getGeneralDescripcion();
         document.getElementById('temp').innerHTML = w.getDetails().temp;
@@ -15,6 +32,7 @@ export const DisplayController = (() => {
         main.classList.remove("hide");
         main.classList.remove("show-main");
         main.classList.add("show-main");
+        displayBackgroudnWeather(w.getGetMainWeather());
     };
     return {
         displayWeather,
