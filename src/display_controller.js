@@ -1,12 +1,10 @@
 import { Weather } from './weather';
 export const DisplayController = (() => {
-    const displayBackgroudnWeather = (weather) => {
-        console.log(weather);
+    const displayBackgroundWeather = (weather) => {
         const img = document.getElementById('card-current');
         const scenes = ["thunderstorm", "drizzle", "rain", "snow", "clear", "clouds"];
         let found = false;
         scenes.forEach(element => {
-            console.log(element);
             if (weather.toLowerCase().includes(element)) {
                 img.style.backgroundImage = "url('/src/img/" + element + ".jpg')";
                 found = true;
@@ -15,9 +13,10 @@ export const DisplayController = (() => {
         if (!found) {
             img.style.backgroundImage = "url('/src/img/athmosphere.jpg')";
         }
-        console.log(found);
     };
-    const displayWeather = (w) => {
+    const displayWeather = (w, mode) => {
+        console.log(mode);
+        w.changeDisplayMode(mode);
         document.getElementById('general').innerHTML = w.getGeneralDescripcion();
         document.getElementById('temp').innerHTML = w.getDetails().temp;
         document.getElementById('temp_max').innerHTML = w.getDetails().temp_max;
@@ -32,7 +31,10 @@ export const DisplayController = (() => {
         main.classList.remove("hide");
         main.classList.remove("show-main");
         main.classList.add("show-main");
-        displayBackgroudnWeather(w.getGetMainWeather());
+        displayBackgroundWeather(w.getGetMainWeather());
+        Array.from(document.getElementsByClassName('mode')).forEach(element => {
+            element.innerHTML = mode;
+        });
     };
     return {
         displayWeather,

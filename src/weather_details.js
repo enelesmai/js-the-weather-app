@@ -9,7 +9,7 @@ export const WeatherDetails = (feels_like, humidity, pressure, temp, temp_max, t
         city,
         country,
         timezone,
-        url_icon
+        url_icon,
     };
 };
 export default WeatherDetails;

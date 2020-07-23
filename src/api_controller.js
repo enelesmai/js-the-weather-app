@@ -3,9 +3,11 @@ import { Weather } from './weather';
 export const ApiController = (() => {
     const api_weather_app = 'http://api.openweathermap.org/data/2.5/weather?q=#location&appid=f3829e82bc93f1c9d497b6b667b49b50';
     const icon_server = 'http://openweathermap.org/img/wn/';
-    const getWeatherAsync = (location) =>
+    const getWeatherAsync = (location, mode) =>
         (async() => {
-            let api_call = api_weather_app.replace(/#location/, location);
+            console.log("mode api");
+            let api_call = api_weather_app.replace(/#location/, location) + (mode === 'C' ? "&units=metric" : "");
+            console.log(api_call);
             let response = await fetch(api_call);
             let data = await response.json();
             return translateResponseToObject(data);
