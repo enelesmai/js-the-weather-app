@@ -1,0 +1,51 @@
+{
+    "name": "js-the-weather-app",
+    "version": "1.0.0",
+    "description": "weather application that consumes an API and show the information related to the query",
+    "private": true,
+    "main": "index.js",
+    "watch": {
+        "test": "{src,test}/*.js"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "webpack",
+        "dev": "webpack --mode development",
+        "start": "webpack-dev-server --mode development --open"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/enelesmai/js-the-weather-app.git"
+    },
+    "author": "Selene Flores",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/enelesmai/js-the-weather-app/issues"
+    },
+    "homepage": "https://github.com/enelesmai/js-the-weather-app#readme",
+    "devDependencies": {
+        "css-loader": "^3.6.0",
+        "eslint": "^6.8.0",
+        "eslint-config-airbnb-base": "^14.1.0",
+        "eslint-plugin-import": "^2.20.2",
+        "file-loader": "^6.0.0",
+        "font-awesome": "^4.7.0",
+        "style-loader": "^1.2.1",
+        "stylelint": "^13.3.3",
+        "stylelint-config-standard": "^20.0.0",
+        "stylelint-csstree-validator": "^1.8.0",
+        "stylelint-scss": "^3.17.2",
+        "url-loader": "^4.1.0",
+        "webpack": "^4.43.0",
+        "webpack-cli": "^3.3.12"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-free": "^5.14.0",
+        "bootstrap": "^4.5.0",
+        "jquery": "^3.5.1",
+        "js-yaml": "^3.14.0",
+        "lodash": "^4.17.19",
+        "npm-watch": "^0.6.0",
+        "popper.js": "^1.16.1"
+    }
+}
